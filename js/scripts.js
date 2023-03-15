@@ -5,3 +5,7 @@ let pokemonList = [
 { name: 'charmander', height: 0.6, types:'water'}
 ];
 
+
+for (let i = 0; i <= pokemonList.length; i++) {
+  document.write(pokemonList[i].name + ' ' + 'height' + ' ' + pokemonList[i].height)
+}
