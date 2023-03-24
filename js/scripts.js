@@ -28,5 +28,6 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 	let button = document.createElement('button')
 	button.innerText = 'pokemon'
 	button.classList.add()
+	listItem.appendChild(button);
 });
 
