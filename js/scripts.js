@@ -20,6 +20,20 @@ let pokemonRepository = (function () {
     getAll: getAll
   }
 
+  function showDetails(pokemon) {}
+
+  function addListItem(pokemon) {}
+
+  return {
+  	add: add,
+
+  	getAll: getAll,
+
+  	showDetails: showDetails,
+
+  	addListItem: addListItem
+  }
+
 })()
 
 pokemonRepository.getAll().forEach(function(pokemon) {
