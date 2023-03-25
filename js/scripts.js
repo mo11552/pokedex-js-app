@@ -37,6 +37,7 @@ let pokemonRepository = (function () {
 })()
 
 pokemonRepository.getAll().forEach(function(pokemon) {
+	pokemonRepository.addListItem(pokemon);
 	document.querySelector('ul');
 	let listItem = document.createElement('li')
 	let button = document.createElement('button')
