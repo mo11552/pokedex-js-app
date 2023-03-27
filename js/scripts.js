@@ -20,7 +20,9 @@ let pokemonRepository = (function () {
     getAll: getAll
   }
 
-  function showDetails(pokemon) {}
+  function showDetails(pokemon) {
+  	console.log(pokemon);
+  }
 
   function addListItem(pokemon) {
   	// Get ul element
