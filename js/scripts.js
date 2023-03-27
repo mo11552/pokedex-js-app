@@ -15,11 +15,6 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
-  return {
-    add: add,
-    getAll: getAll
-  }
-
   function showDetails(pokemon) {
   	console.log(pokemon);
   }
