@@ -66,6 +66,19 @@ let pokemonRepository = (function () {
     });
   }
 
+  function showModal(item) {
+  	pokemonRepository.loadDetails(item).then(function () {
+  	  let pokemonImage = document.querySelector('.pokemon-image');
+  	  pokemonImage.src = item.imageUrl;
+
+  	  let pokemonName = document.querySelector('.pokemon-name');
+  	  pokemonName.innerText = item.name;
+
+  	  let pokemonHeight = document.querySelector('.pokemon-height');
+  	  pokemonHeight.innerText = '>' + (item.height/10) + 'm';
+  	});
+  }
+
   return {
   	add: add,
   	getAll: getAll,
