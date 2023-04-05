@@ -66,16 +66,19 @@ let pokemonRepository = (function () {
     });
   }
 
-  function showModal(item) {
-  	pokemonRepository.loadDetails(item).then(function () {
-  	  let pokemonImage = document.querySelector('.pokemon-image');
-  	  pokemonImage.src = item.imageUrl;
+  function showModal(pokemon) {
+  	pokemonRepository.loadDetails(pokemon).then(function () {
 
-  	  let pokemonName = document.querySelector('.pokemon-name');
-  	  pokemonName.innerText = item.name;
+  	  let modalContainer = document.querySelector("#modal-container");
+  	  modalContainer.classList.add("is-visible");
+  	  let pokemonImage = document.querySelector('.pokemon-image'); //pokemon image
+  	  pokemonImage.src = pokemon.imageUrl;
 
-  	  let pokemonHeight = document.querySelector('.pokemon-height');
-  	  pokemonHeight.innerText = '>' + (item.height/10) + 'm';
+  	  let pokemonName = document.querySelector('.pokemon-name'); //pokemon name
+  	  pokemonName.innerText = pokemon.name;
+
+  	  let pokemonHeight = document.querySelector('.pokemon-height'); //pokemon height
+  	  pokemonHeight.innerText = '>' + (pokemon.height/10) + 'm';
   	});
   }
 
