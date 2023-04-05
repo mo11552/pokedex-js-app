@@ -72,6 +72,10 @@ let pokemonRepository = (function () {
 
   	  let modalContainer = document.querySelector("#modal-container");
   	  modalContainer.classList.add("is-visible");
+
+  	  let closeButton = document.querySelector(".modal-close");
+  	  closeButton.addEventListener("click", closeModal);
+  	  
   	  let pokemonImage = document.querySelector('.pokemon-image'); //pokemon image
   	  pokemonImage.src = pokemon.imageUrl;
 
@@ -81,6 +85,11 @@ let pokemonRepository = (function () {
   	  let pokemonHeight = document.querySelector('.pokemon-height'); //pokemon height
   	  pokemonHeight.innerText = '>' + (pokemon.height/10) + 'm';
   	});
+  }
+
+  function closeModal() {
+  	let modalContainer = document.querySelector("#modal-container");
+  	modalContainer.classList.add("is-visible");
   }
 
   return {
