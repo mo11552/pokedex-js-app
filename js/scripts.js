@@ -68,24 +68,23 @@ let pokemonRepository = (function () {
   }
 
   function showModal(pokemon) {
-  	pokemonRepository.loadDetails(pokemon).then(function () {
 
-  	  let modalContainer = document.querySelector("#modal-container");
-  	  modalContainer.classList.add("is-visible");
+  	let modalContainer = document.querySelector("#modal-container");
+  	modalContainer.classList.add("is-visible");
 
-  	  let closeButton = document.querySelector(".modal-close");
-  	  closeButton.addEventListener("click", closeModal);
-  	  
-  	  let pokemonImage = document.querySelector('.pokemon-image'); //pokemon image
-  	  pokemonImage.src = pokemon.imageUrl;
+  	let closeButton = document.querySelector(".modal-close");
+  	closeButton.addEventListener("click", closeModal);
 
-  	  let pokemonName = document.querySelector('.pokemon-name'); //pokemon name
-  	  pokemonName.innerText = pokemon.name;
+  	let pokemonImage = document.querySelector('.pokemon-image'); //pokemon image
+  	pokemonImage.src = pokemon.imageUrl;
 
-  	  let pokemonHeight = document.querySelector('.pokemon-height'); //pokemon height
-  	  pokemonHeight.innerText = '>' + (pokemon.height/10) + 'm';
-  	});
+  	let pokemonName = document.querySelector('.pokemon-name'); //pokemon name
+  	pokemonName.innerText = pokemon.name;
+
+  	let pokemonHeight = document.querySelector('.pokemon-height'); //pokemon height
+  	pokemonHeight.innerText = 'height' + ' ' + (pokemon.height/10) + 'm';
   }
+  
 
   function closeModal() {
   	let modalContainer = document.querySelector("#modal-container");
@@ -98,9 +97,10 @@ let pokemonRepository = (function () {
   	loadList: loadList,
   	loadDetails: loadDetails,
   	showDetails: showDetails,
-  	addListItem: addListItem
-  }
-
+  	addListItem: addListItem,
+  	showModal: showModal,
+  	closeModal: closeModal
+  };
 })()
 pokemonRepository.loadList().then(function() {
   pokemonRepository.getAll().forEach(function(pokemon) {
