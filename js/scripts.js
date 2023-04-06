@@ -88,7 +88,7 @@ let pokemonRepository = (function () {
 
   function closeModal() {
   	let modalContainer = document.querySelector("#modal-container");
-  	modalContainer.classList.add("is-visible");
+  	modalContainer.classList.remove("is-visible");
   }
 
   return {
