@@ -23,10 +23,12 @@ let pokemonRepository = (function () {
   	// Get ul element
   	let ul = document.querySelector("ul");
   	// create li element
-  	let listItem = document.createElement("list-group-item");
+  	let listItem = document.createElement("li");
   	// create button element
   	let button = document.createElement("button");
   	// set the pokemon name as the text of the button
+  	listItem.addClass("list-group-item");
+  	// list group item added to li elements
   	button.innerText = pokemon.name;
   	// add the eventListener to the button
   	button.addEventListener("click", function () {
