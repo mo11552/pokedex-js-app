@@ -29,6 +29,8 @@ let pokemonRepository = (function () {
   	// set the pokemon name as the text of the button
   	listItem.addClass("list-group-item");
   	// list group item added to li elements
+  	button.classList.add('btn');
+  	button.classList.add('btn-primary');
   	button.innerText = pokemon.name;
   	// add the eventListener to the button
   	button.addEventListener("click", function () {
