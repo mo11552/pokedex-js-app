@@ -89,21 +89,19 @@ let pokemonRepository = (function () {
   	modalTitle.empty();
   	modalBody.empty();
 
-  	let closeButton = document.querySelector(".modal-close");
+  	let closeButton = document.querySelector(".close");
   	closeButton.addEventListener("click", closeModal);
 
-  	let pokemonImage = document.querySelector('.pokemon-image'); //pokemon image
-  	pokemonImage.src = pokemon.imageUrl;
+  	let pokemonImage = $('<img class="pokemon-img" src="' + pokemon.imageUrl + '" />');
 
   	let pokemonName = document.querySelector('.pokemon-name'); //pokemon name
   	pokemonName.innerText = pokemon.name;
 
-  	let pokemonHeight = document.querySelector('.pokemon-height'); //pokemon height
-  	pokemonHeight.innerText = 'height' + ' ' + (pokemon.height/10) + 'm';
+  	let pokemonHeight = $('<p>' + 'Height: ' + pokemon.height + '</p>');
 
   	let typesElement = $("<p>" + "types : " + item.types + "</p>");
 
-  	modalTitle.append(pokemonName);
+  	modalTitle.append(pokemon.name);
   	modalBody.append(pokemonImage);
   	modalBody.append(pokemonHeight);
   	modalBody.append(typesElement);
