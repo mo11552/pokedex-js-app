@@ -43,7 +43,7 @@ let pokemonRepository = (function () {
 	listItem.appendChild(button);
 	// append the li element inside the ul
 	ul.appendChild(listItem);
-	pokemonListElement.appendChild(listpokemon);
+	pokemonListElement.appendChild(listItem);
   }
 
   function loadList() {
