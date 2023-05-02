@@ -58,6 +58,7 @@ let pokemonRepository = (function () {
     add(pokemon);
    });
    }).catch(function (e) {
+  /* eslint-disable no-console */
    console.error(e);
    })
   }
