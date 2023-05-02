@@ -81,11 +81,9 @@ let pokemonRepository = (function () {
   //let modalContainer = document.querySelector("#modal-container");
   //modalContainer.classList.add("is-visible");
 
-  let modalBody = $('.modal-body');
+  let modalBody = '$'('.modal-body');
 
-  let modalTitle = $('.modal-title');
-
-  let modalHeader = $('.modal-header');
+  let modalTitle = '$'('.modal-title');
 
   modalTitle.empty();
   modalBody.empty();
@@ -93,11 +91,11 @@ let pokemonRepository = (function () {
   let closeButton = document.querySelector('.close');
   closeButton.addEventListener('click', closeModal);
 
-  let pokemonImage = $('<img class="pokemon-img" src="' + pokemon.imageUrl + '" />');
+  let pokemonImage = '$'('<img class="pokemon-img" src="' + pokemon.imageUrl + '" />');
 
-  let pokemonHeight = $('<p>' + 'Height: ' + pokemon.height + '</p>');
+  let pokemonHeight = '$'('<p>' + 'Height: ' + pokemon.height + '</p>');
 
-  let typesElement =  $('<p>' + 'types : ' + pokemon.types + '</p>');
+  let typesElement =  '$'('<p>' + 'types : ' + pokemon.types + '</p>');
 
   modalTitle.append(pokemon.name);
   modalBody.append(pokemonImage);
